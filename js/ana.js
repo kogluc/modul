@@ -1,4 +1,4 @@
-const modulURL = location.origin + "/js/modul/";
+const modulURL = location.origin + "/modul/js/modul/";
 
 window.komutuIsle = async function(komut) {
   switch (komut) {
