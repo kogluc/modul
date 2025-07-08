@@ -1,8 +1,13 @@
 export async function komutuIsle(komut) {
   switch (komut) {
-    case "tema":
+    case "dark":
       const temaModul = await import('./temaDegistirici.js');
       temaModul.temayiUygula("dark");
+      break;
+      
+  case "light":
+      const temaModul = await import('./temaDegistirici.js');
+      temaModul.temayiUygula("light");
       break;
 
     case "veri":
