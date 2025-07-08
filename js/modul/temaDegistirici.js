@@ -1,11 +1,9 @@
-export function temayiUygula(tema) {
-  alert("Tema uygulandı: " + tema);
+function temaDegistiriciyiKur() {
+  const dropdown = document.getElementById("themeDropdown");
+  if (!dropdown) return;
 
-  if (tema === 'dark') {
-    document.body.style.background = '#111';
-    document.body.style.color = '#fff';
-  } else {
-    document.body.style.background = '#fff';
-    document.body.style.color = '#000';
-  }
+  dropdown.addEventListener("change", () => {
+    document.body.setAttribute("data-tema", dropdown.value);
+    console.log("Tema değişti:", dropdown.value);
+  });
 }
