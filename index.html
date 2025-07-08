@@ -2,15 +2,19 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Komutla Modül Yükle</title>
+  <title>Modüler Sistem - Async Await</title>
 </head>
 <body>
-  <h1>Komut ile Modül Yükle</h1>
-  <button onclick="komutuIsle('koyu')">koyu</button>
-  <button onclick="komutuIsle('acik')">açık</button>
-  <button onclick="komutuIsle('veri')">veri</button>
+  <h1>Modül Sistemi Başlatıldı</h1>
 
-  <!-- DİKKAT: type="module" zorunlu -->
-  <script type="module" src="js/ana.js"></script>
+  <select id="themeDropdown">
+    <option value="light">Açık</option>
+    <option value="dark">Koyu</option>
+  </select>
+
+  <button onclick="komutuIsle('deneme')">Komutu Çalıştır</button>
+
+  <!-- SADECE ANA SCRIPT -->
+  <script src="js/ana.js"></script>
 </body>
 </html>
