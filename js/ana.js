@@ -1,20 +1,16 @@
-(function () {
-  const script = document.createElement('script');
-  script.src = 'js/modul/komutIsleyici.js';
-  script.onload = () => {
-    document.addEventListener('DOMContentLoaded', () => {
-      const isleyici = window.komutIsleyiciKur?.();
-      if (isleyici) {
-        window.komutuIsle = isleyici.komutuIsle;
-        const btn = document.getElementById("komutBtn");
-        btn?.addEventListener("click", () => {
-          window.komutuIsle?.("GitHub Pages üzerinden çalıştı!");
-        });
-      }
-    });
-  };
-  script.onerror = () => {
-    console.error("komutIsleyici.js yüklenemedi.");
-  };
-  document.head.appendChild(script);
-})();
+window.komutuIsle = async function(komut) {
+  switch (komut) {
+    case 'tema':
+      const temaModul = await import('./modul/temaDegistirici.js');
+      temaModul.temayiUygula?.("dark");
+      break;
+
+    case 'veri':
+      const veriModul = await import('./modul/veriYukleyici.js');
+      veriModul.verileriYukle();
+      break;
+
+    default:
+      alert("Bilinmeyen komut: " + komut);
+  }
+}
