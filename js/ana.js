@@ -1,4 +1,3 @@
-// Global fonksiyon olarak tanımlıyoruz (window içine)
 window.komutuIsle = async function (komut) {
   switch (komut) {
     case 'koyu': {
