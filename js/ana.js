@@ -6,7 +6,7 @@ window.komutuIsle = async function(komut) {
       break;
 
     case "light":
-      const temaModul = await import('./temaDegistirici.js');
+      const temaModul = await import('./modul/temaDegistirici.js');
       temaModul.temayiUygula("light");
       break;
 
