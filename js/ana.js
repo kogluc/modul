@@ -1,16 +1,18 @@
+const modulURL = location.origin + "/js/modul/";
+
 window.komutuIsle = async function(komut) {
   switch (komut) {
     case 'dark':
     case 'light':
       {
-        const temaModul = await import('../modul/temaDegistirici.js');
+        const temaModul = await import(`${modulURL}temaDegistirici.js`);
         temaModul.temayiUygula(komut);
       }
       break;
 
     case 'veri':
       {
-        const veriModul = await import('../modul/veriYukleyici.js');
+        const veriModul = await import(`${modulURL}veriYukleyici.js`);
         veriModul.verileriYukle();
       }
       break;
