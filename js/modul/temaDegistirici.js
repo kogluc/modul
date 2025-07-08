@@ -1,5 +1,11 @@
 export function temayiUygula(tema) {
   alert("Tema uygulandı: " + tema);
-  document.body.style.background = tema === 'dark' ? '#111' : '#fff';
-  document.body.style.color = tema === 'dark' ? '#fff' : '#000';
+
+  if (tema === 'dark') {
+    document.body.style.background = '#111';
+    document.body.style.color = '#fff';
+  } else {
+    document.body.style.background = '#fff';
+    document.body.style.color = '#000';
+  }
 }
